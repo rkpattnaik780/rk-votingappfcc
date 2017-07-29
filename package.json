@@ -1,0 +1,26 @@
+{
+  "name": "votingappfcc",
+  "version": "1.0.0",
+  "engines": {
+    "node": "6.11.0",
+    "npm": "5.0.1"
+  },
+  "description": "The first basejump project of freeCodeCamp backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "run app.js",
+    "start": "node index.js"
+  },
+  "author": "Ramakrishna Pattnaik",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-session": "^1.15.3",
+    "mongodb": "^2.2.30",
+    "nodemailer": "^4.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
