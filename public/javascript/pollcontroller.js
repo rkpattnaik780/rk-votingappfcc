@@ -9,7 +9,7 @@ ang.controller('myCtrl', function ($scope, $http) {
     $http.get('/profile').then(function (res) {
       console.log("fetch user data");
       if (!res.data) {
-        $scope.display = "collapse";
+        $scope.display = "none";
       }
       $scope.userinfo = res.data;
     }, function (res) { console.log(error); });
