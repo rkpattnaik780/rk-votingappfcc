@@ -56,7 +56,8 @@ ang.controller('myCtrl', function ($scope, $http) {
           loadPolls();
         }, function (res) { console.log(error); });
       }
-      else alert("You have already voted");
+      else { alert("You have already voted");
+             $scope.errmsg = "block" ;}
     }, function (res) { console.log(error); });
   };
   $scope.add3 = function (item) {
@@ -68,7 +69,8 @@ ang.controller('myCtrl', function ($scope, $http) {
           loadPolls();
         }, function (res) { console.log(error); });
       }
-      else alert("You have already voted");
+      else { alert("You have already voted");
+             $scope.errmsg = "block" ;}
     }, function (res) { console.log(error); });
   };
   $scope.add4 = function (item) {
@@ -80,7 +82,8 @@ ang.controller('myCtrl', function ($scope, $http) {
           loadPolls();
         }, function (res) { console.log(error); });
       }
-      else alert("You have already voted");
+      else { alert("You have already voted");
+             $scope.errmsg = "block" ;}
     }, function (res) { console.log(error); });
   };
 });
