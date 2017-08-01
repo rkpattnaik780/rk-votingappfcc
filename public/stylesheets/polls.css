@@ -35,3 +35,8 @@ body{padding-top : 50px ;}
 .diffpolls h1 { font-size : 25px !important ;}
 .diffpolls ul {list-style-type: none ;}
 .diffpolls p { text-align: right ;}
+
+.errmsg{ color :red ;
+         padding-top :10px ;
+         position : fixed ;
+         text-align: center ;}

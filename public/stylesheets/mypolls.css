@@ -41,3 +41,7 @@ body{padding-top : 50px ;}
           padding : 5px ;
           top : 0px ;
           right : 0px;}
+
+.errmsg{ color :red ;
+         padding-top :10px ;
+         text-align: center ;}

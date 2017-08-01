@@ -6,6 +6,7 @@ ang.controller('myCtrl', function ($scope, $http) {
 
   function load() {
     $scope.display = "visible";
+    $scope.errmsg = "none" ;
     $http.get('/profile').then(function (res) {
       console.log("fetch user data");
       if (!res.data) {
@@ -41,7 +42,9 @@ ang.controller('myCtrl', function ($scope, $http) {
           loadPolls();
         }, function (res) { console.log(error); });
       }
-      else alert("You have already voted");
+      else 
+      {alert("You have already voted"); 
+        $scope.errmsg = "block" ;}
     }, function (res) { console.log(error); });
   };
   $scope.add2 = function (item) {
