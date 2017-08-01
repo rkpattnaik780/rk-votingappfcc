@@ -7,7 +7,6 @@ ang.controller('myCtrl', function ($scope, $http) {
     $scope.emailmsg = "none";
 
     $scope.register = function (user) {
-        $scope.$apply(function () { $scope.idmsg = "none"; $scope.emailmsg = "none";});
         var t = true;
         function validateEmail(email) {
             var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
