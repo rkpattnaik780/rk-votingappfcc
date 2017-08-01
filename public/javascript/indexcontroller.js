@@ -2,6 +2,8 @@ var ang = angular.module('myApp', []);
 
 ang.controller('myCtrl', function ($scope, $http, $location) {
 
+    $scope.errmsg = "none";
+
     $scope.login = function (user) {
         var t = true;
         if (!(user.userid && user.password)) {
@@ -13,7 +15,7 @@ ang.controller('myCtrl', function ($scope, $http, $location) {
                 if(res.data)  { location.href = 'htmlpages/dashboard.html' ; }
                 else 
                 {
-                    alert("The userid and password isn't registered");
+                    $scope.errmsg = "block";
                     user.userid = null ;
                     user.password = null ;
                 }

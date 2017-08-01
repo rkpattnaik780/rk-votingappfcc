@@ -2,7 +2,12 @@ var ang = angular.module('myApp', []);
 
 ang.controller('myCtrl', function ($scope, $http) {
 
+    $scope.idmsg = "none";
+
+    $scope.emailmsg = "none";
+
     $scope.register = function (user) {
+        $scope.$apply(function () { $scope.idmsg = "none"; $scope.emailmsg = "none";});
         var t = true;
         function validateEmail(email) {
             var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -62,7 +67,7 @@ ang.controller('myCtrl', function ($scope, $http) {
                             }, function (response) { console.log(error); });
                         }
                         else {
-                            alert("Userid is already taken up");
+                            $scope.idmsg = "block";
                             user.password = null;
                             user.password2 = null;
                             user.userid = null;
@@ -71,7 +76,7 @@ ang.controller('myCtrl', function ($scope, $http) {
                     }, function (res) { console.log(error); });
                 }
                 else {
-                    alert("Email ID is already registered!!");
+                    $scope.emailmsg = "block";
                     user.password = null;
                     user.password2 = null;
                     user.email = null;

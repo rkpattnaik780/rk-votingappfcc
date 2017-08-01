@@ -30,3 +30,6 @@ body { overflow: hidden ;}
 #myprofile{ bottom : 5%;
             position : absolute;}
 #slogan{ padding-left : 50%;}
+.errmsg{ color :red ;
+         padding-top :10px ;
+         text-align: center ;}

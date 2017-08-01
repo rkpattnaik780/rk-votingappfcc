@@ -24,12 +24,14 @@
                     <label for="username">Username:</label>
                     <input type="text" class="form-control" id="username" placeholder="Enter username" name="username" 
                     ng-model = "user.userid" required>
+                    <span class = "errmsg" style = "display : {{idmsg}}"><i>The UserID has already been taken up!</i></span>
                 </div>
 
                  <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" class="form-control" id="email" placeholder="Enter email ID" name="email" 
                     ng-model = "user.email" required>
+                    <span class = "errmsg" style = "display : {{emailmsg}}"><i>The email has already been registered!</span>
                 </div>
 
                  <div class="form-group">

@@ -33,6 +33,7 @@ ang.controller('myCtrl', function ($scope, $http) {
   };
 
   $scope.add1 = function (item) {
+    alert("Thanks for voting!");
     $http.post('/checkvoted', item).then(function (res) {
       $scope.onPoll = res.data;
       if ($scope.onPoll.voters.indexOf($scope.userinfo.userid) === -1) {
@@ -44,6 +45,7 @@ ang.controller('myCtrl', function ($scope, $http) {
     }, function (res) { console.log(error); });
   };
   $scope.add2 = function (item) {
+    alert("Thanks for voting!");
     $http.post('/checkvoted', item).then(function (res) {
       $scope.onPoll = res.data;
       if ($scope.onPoll.voters.indexOf($scope.userinfo.userid) === -1) {
@@ -55,6 +57,7 @@ ang.controller('myCtrl', function ($scope, $http) {
     }, function (res) { console.log(error); });
   };
   $scope.add3 = function (item) {
+    alert("Thanks for voting!");
     $http.post('/checkvoted', item).then(function (res) {
       $scope.onPoll = res.data;
       if ($scope.onPoll.voters.indexOf($scope.userinfo.userid) === -1) {
@@ -66,6 +69,7 @@ ang.controller('myCtrl', function ($scope, $http) {
     }, function (res) { console.log(error); });
   };
   $scope.add4 = function (item) {
+    alert("Thanks for voting!");
     $http.post('/checkvoted', item).then(function (res) {
       $scope.onPoll = res.data;
       if ($scope.onPoll.voters.indexOf($scope.userinfo.userid) === -1) {
