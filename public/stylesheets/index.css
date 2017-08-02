@@ -1,6 +1,13 @@
 *{ padding : 0px ;
    margin: 0px ;}
-body { overflow: hidden ;}
+
+@media screen and (min-width: 800px OR min-height: 700px) {
+   body { overflow-x : hidden ;
+          overflow-y : hidden ;}  
+}
+
+body { overflow-x : hidden ;}
+
 #info{
     background-color: #99ff99 ;
     height : 100vh;
@@ -9,7 +16,7 @@ body { overflow: hidden ;}
     font-family: 'Roboto', sans-serif;
 }
 .small-text{ font-size: 75%; color : #66d9ff }
-#signupbar{ height : 100vh ;
+#signupbar{ height : 100% ;
             font-family: 'Oxygen', sans-serif; 
             padding : 20px;} 
 #regform{
