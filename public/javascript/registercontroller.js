@@ -1,6 +1,6 @@
-var ang = angular.module('myApp', []);
+var ang = angular.module('regApp', []);
 
-ang.controller('myCtrl', function ($scope, $http) {
+ang.controller('regCtrl', function ($scope, $http) {
 
     $scope.idmsg = "none";
 

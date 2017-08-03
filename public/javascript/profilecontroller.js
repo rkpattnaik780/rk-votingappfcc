@@ -1,6 +1,6 @@
-var ang = angular.module('myApp', []);
+var ang = angular.module('profApp', []);
 
-ang.controller('myCtrl', function ($scope, $http) {
+ang.controller('profCtrl', function ($scope, $http) {
     function load(){
        $scope.display = "visible" ; 
       $http.get('/profile').then(function (res) {

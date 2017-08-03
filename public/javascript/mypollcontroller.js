@@ -1,6 +1,6 @@
-var ang = angular.module('myApp', []);
+var ang = angular.module('myPollApp', []);
 
-ang.controller('myCtrl', function ($scope, $http) {
+ang.controller('myPollCtrl', function ($scope, $http) {
     
       function load(){
        $scope.display = "visible" ; 

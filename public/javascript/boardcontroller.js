@@ -1,6 +1,6 @@
-var ang = angular.module('myApp', []);
+var ang = angular.module('boardApp', []);
 
-ang.controller('myCtrl', function ($scope, $http) {
+ang.controller('boardCtrl', function ($scope, $http) {
     function load() {
 
         $http.get('/dashboard').then(function (res) {

@@ -1,6 +1,6 @@
-var ang = angular.module('myApp', []);
+var ang = angular.module('pollApp', []);
 
-ang.controller('myCtrl', function ($scope, $http) {
+ang.controller('pollCtrl', function ($scope, $http) {
 
   $scope.onPoll = {};
 
@@ -34,6 +34,7 @@ ang.controller('myCtrl', function ($scope, $http) {
   };
 
   $scope.add1 = function (item) {
+    $scope.errmsg = "none" ;
     alert("Thanks for voting!");
     $http.post('/checkvoted', item).then(function (res) {
       $scope.onPoll = res.data;
@@ -48,6 +49,7 @@ ang.controller('myCtrl', function ($scope, $http) {
     }, function (res) { console.log(error); });
   };
   $scope.add2 = function (item) {
+    $scope.errmsg = "none" ;
     alert("Thanks for voting!");
     $http.post('/checkvoted', item).then(function (res) {
       $scope.onPoll = res.data;
@@ -61,6 +63,7 @@ ang.controller('myCtrl', function ($scope, $http) {
     }, function (res) { console.log(error); });
   };
   $scope.add3 = function (item) {
+    $scope.errmsg = "none" ;
     alert("Thanks for voting!");
     $http.post('/checkvoted', item).then(function (res) {
       $scope.onPoll = res.data;
@@ -74,6 +77,7 @@ ang.controller('myCtrl', function ($scope, $http) {
     }, function (res) { console.log(error); });
   };
   $scope.add4 = function (item) {
+    $scope.errmsg = "none" ;
     alert("Thanks for voting!");
     $http.post('/checkvoted', item).then(function (res) {
       $scope.onPoll = res.data;

@@ -1,6 +1,6 @@
-var ang = angular.module('myApp', []);
+var ang = angular.module('findApp', []);
 
-ang.controller('myCtrl', function ($scope, $http) {
+ang.controller('findCtrl', function ($scope, $http) {
     function validateEmail(email) {
             var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return re.test(email);

@@ -1,6 +1,6 @@
-var ang = angular.module('myApp', []);
+var ang = angular.module('indexApp', []);
 
-ang.controller('myCtrl', function ($scope, $http, $location) {
+ang.controller('indexCtrl', function ($scope, $http, $location) {
 
     $scope.errmsg = "none";
 
