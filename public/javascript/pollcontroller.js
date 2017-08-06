@@ -6,7 +6,7 @@ ang.controller('pollCtrl', function ($scope, $http) {
 
   function load() {
     $scope.display = "visible";
-    $scope.errmsg = "none" ;
+    $scope.errmsg = "none";
     $http.get('/profile').then(function (res) {
       console.log("fetch user data");
       if (!res.data) {
@@ -34,60 +34,51 @@ ang.controller('pollCtrl', function ($scope, $http) {
   };
 
   $scope.add1 = function (item) {
-    $scope.errmsg = "none" ;
-    alert("Thanks for voting!");
-    $http.post('/checkvoted', item).then(function (res) {
-      $scope.onPoll = res.data;
-      if ($scope.onPoll.voters.indexOf($scope.userinfo.userid) === -1) {
-        $http.post('/votefor1', item).then(function (res) {
-          loadPolls();
-        }, function (res) { console.log(error); });
-      }
-      else 
-      {alert("You have already voted"); 
-        $scope.errmsg = "block" ;}
-    }, function (res) { console.log(error); });
-  };
+    $scope.errmsg = "none";
+    if (item.voters.indexOf($scope.userinfo.userid) === -1) {
+      $http.post('/votefor1', item).then(function (res) {
+        loadPolls();
+      }, function (res) { console.log(error); });
+    }
+    else {
+      alert("You have already voted");
+      $scope.errmsg = "block";
+    }
+  }
   $scope.add2 = function (item) {
-    $scope.errmsg = "none" ;
-    alert("Thanks for voting!");
-    $http.post('/checkvoted', item).then(function (res) {
-      $scope.onPoll = res.data;
-      if ($scope.onPoll.voters.indexOf($scope.userinfo.userid) === -1) {
-        $http.post('/votefor2', item).then(function (res) {
-          loadPolls();
-        }, function (res) { console.log(error); });
-      }
-      else { alert("You have already voted");
-             $scope.errmsg = "block" ;}
-    }, function (res) { console.log(error); });
+     $scope.errmsg = "none";
+    if (item.voters.indexOf($scope.userinfo.userid) === -1) {
+      $http.post('/votefor2', item).then(function (res) {
+        loadPolls();
+      }, function (res) { console.log(error); });
+    }
+    else {
+      alert("You have already voted");
+      $scope.errmsg = "block";
+    }
   };
   $scope.add3 = function (item) {
-    $scope.errmsg = "none" ;
-    alert("Thanks for voting!");
-    $http.post('/checkvoted', item).then(function (res) {
-      $scope.onPoll = res.data;
-      if ($scope.onPoll.voters.indexOf($scope.userinfo.userid) === -1) {
-        $http.post('/votefor3', item).then(function (res) {
-          loadPolls();
-        }, function (res) { console.log(error); });
-      }
-      else { alert("You have already voted");
-             $scope.errmsg = "block" ;}
-    }, function (res) { console.log(error); });
+    $scope.errmsg = "none";
+    if (item.voters.indexOf($scope.userinfo.userid) === -1) {
+      $http.post('/votefor3', item).then(function (res) {
+        loadPolls();
+      }, function (res) { console.log(error); });
+    }
+    else {
+      alert("You have already voted");
+      $scope.errmsg = "block";
+    }
   };
   $scope.add4 = function (item) {
-    $scope.errmsg = "none" ;
-    alert("Thanks for voting!");
-    $http.post('/checkvoted', item).then(function (res) {
-      $scope.onPoll = res.data;
-      if ($scope.onPoll.voters.indexOf($scope.userinfo.userid) === -1) {
-        $http.post('/votefor4', item).then(function (res) {
-          loadPolls();
-        }, function (res) { console.log(error); });
-      }
-      else { alert("You have already voted");
-             $scope.errmsg = "block" ;}
-    }, function (res) { console.log(error); });
+    $scope.errmsg = "none";
+    if (item.voters.indexOf($scope.userinfo.userid) === -1) {
+      $http.post('/votefor4', item).then(function (res) {
+        loadPolls();
+      }, function (res) { console.log(error); });
+    }
+    else {
+      alert("You have already voted");
+      $scope.errmsg = "block";
+    }
   };
 });

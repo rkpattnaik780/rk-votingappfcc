@@ -11,11 +11,10 @@ app.post('/', function (req, res) {
     mongo.connect(url, function (err, db) {
         if (err) throw err;
         db.collection("polling").updateOne({ question: req.body.question },
-            { $inc: { c1: 1 } , $push: { voters : req.session.user.userid}}, function (err, doc) {
+            {  
+                $inc: { c1: 1 } , $push: { voters : req.session.user.userid}}, function (err, doc) {
                 if (err) throw err;
-                console.log("1 record updated");
-                console.log(doc);
-                res.json(doc);
+                res.end();
                 db.close();
             });
     });

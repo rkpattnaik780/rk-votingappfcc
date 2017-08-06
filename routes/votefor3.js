@@ -13,8 +13,6 @@ app.post('/', function (req, res) {
         db.collection("polling").updateOne({ question: req.body.question },
             { $inc: { c3: 1 } , $push: { voters : req.session.user.userid} }, function (err, doc) {
                 if (err) throw err;
-                console.log("1 record updated");
-                console.log(doc);
                 res.json(doc);
                 db.close();
             });
