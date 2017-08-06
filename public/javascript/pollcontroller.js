@@ -36,6 +36,7 @@ ang.controller('pollCtrl', function ($scope, $http) {
   $scope.add1 = function (item) {
     $scope.errmsg = "none";
     if (item.voters.indexOf($scope.userinfo.userid) === -1) {
+      item.voters.push($scope.userinfo.userid);
       $http.post('/votefor1', item).then(function (res) {
         loadPolls();
       }, function (res) { console.log(error); });
@@ -48,6 +49,7 @@ ang.controller('pollCtrl', function ($scope, $http) {
   $scope.add2 = function (item) {
      $scope.errmsg = "none";
     if (item.voters.indexOf($scope.userinfo.userid) === -1) {
+      item.voters.push($scope.userinfo.userid);
       $http.post('/votefor2', item).then(function (res) {
         loadPolls();
       }, function (res) { console.log(error); });
@@ -60,6 +62,7 @@ ang.controller('pollCtrl', function ($scope, $http) {
   $scope.add3 = function (item) {
     $scope.errmsg = "none";
     if (item.voters.indexOf($scope.userinfo.userid) === -1) {
+      item.voters.push($scope.userinfo.userid);
       $http.post('/votefor3', item).then(function (res) {
         loadPolls();
       }, function (res) { console.log(error); });
@@ -72,6 +75,7 @@ ang.controller('pollCtrl', function ($scope, $http) {
   $scope.add4 = function (item) {
     $scope.errmsg = "none";
     if (item.voters.indexOf($scope.userinfo.userid) === -1) {
+      item.voters.push($scope.userinfo.userid);
       $http.post('/votefor4', item).then(function (res) {
         loadPolls();
       }, function (res) { console.log(error); });
