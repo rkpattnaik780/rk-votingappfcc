@@ -59,8 +59,6 @@ ang.controller('regCtrl', function ($scope, $http) {
                         // if userid is available , data is returned .
                         if (!res.data) {
                             $http.post('/signup', $scope.user).then(function (response) {
-                                console.log(response.data);
-                                alert('successfully registered!');
                                 location.href = "dashboard.html";
                                 $scope.user = {};
                             }, function (response) { console.log(error); });

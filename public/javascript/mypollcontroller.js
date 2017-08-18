@@ -24,7 +24,6 @@ ang.controller('myPollCtrl', function ($scope, $http) {
 
      $scope.logoff = function(){
           $http.get('/logout').then(function (res) {
-           alert("Logging you out");
            location.href = "exit.html"
       }, function (res) {console.log(error);});
      };

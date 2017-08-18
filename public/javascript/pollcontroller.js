@@ -28,7 +28,6 @@ ang.controller('pollCtrl', function ($scope, $http) {
 
   $scope.logoff = function () {
     $http.get('/logout').then(function (res) {
-      alert("Logging you out");
       location.href = "exit.html"
     }, function (res) { console.log(error); });
   };
@@ -42,7 +41,6 @@ ang.controller('pollCtrl', function ($scope, $http) {
       }, function (res) { console.log(error); });
     }
     else {
-      alert("You have already voted");
       $scope.errmsg = "block";
     }
   }
@@ -55,7 +53,6 @@ ang.controller('pollCtrl', function ($scope, $http) {
       }, function (res) { console.log(error); });
     }
     else {
-      alert("You have already voted");
       $scope.errmsg = "block";
     }
   };
@@ -68,7 +65,6 @@ ang.controller('pollCtrl', function ($scope, $http) {
       }, function (res) { console.log(error); });
     }
     else {
-      alert("You have already voted");
       $scope.errmsg = "block";
     }
   };
@@ -81,7 +77,6 @@ ang.controller('pollCtrl', function ($scope, $http) {
       }, function (res) { console.log(error); });
     }
     else {
-      alert("You have already voted");
       $scope.errmsg = "block";
     }
   };

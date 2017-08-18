@@ -73,7 +73,7 @@ app.post('/sendpwd', function (req, res) {
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     port: 465,
-    secure: true, // secure:true for port 465, secure:false for port 587
+    secure: true,
     auth: {
         user: 'ramakpatt@gmail.com',
         pass: process.env.EMAIL_PWD 
