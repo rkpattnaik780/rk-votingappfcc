@@ -14,9 +14,9 @@
     <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
 </head>
 
-<body>
-    <div class="row">
-        <div class="col-sm-6" id="signupbar" ng-app="indexApp" ng-controller="indexCtrl">
+<body ng-app="indexApp" ng-controller="indexCtrl">
+    <div class="row ng-cloak">
+        <div class="col-sm-6" id="signupbar">
             <div id="regform">
                 <div class = "text-center">
                <!-- <img src = "images/evm11.jpg" height = "200px" width = "200px">  -->
@@ -52,8 +52,6 @@
             <p> Get registered now , create polls and cast your votes.</p>
         </div>
     </div>
-    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="javascript/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="javascript/angular.min.js" type="text/javascript"></script>
     <script src="javascript/indexcontroller.js" type="text/javascript"></script>
 </body>

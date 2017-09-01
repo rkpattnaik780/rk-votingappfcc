@@ -22,6 +22,8 @@ var dashboard = require("./routes/dashboard.js");
 var profile = require("./routes/profile.js");
 var logout = require("./routes/logout.js");
 
+require('dotenv').config();
+
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(session({ secret: "afsfujfdijf", resave: false, saveUninitialized: true }));
