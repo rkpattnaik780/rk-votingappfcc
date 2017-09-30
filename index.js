@@ -77,8 +77,8 @@ var transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: 'ramakpatt@gmail.com',
-        pass: process.env.EMAIL_PWD 
+        user: 'ramakpatt@gmail.com',   // For local setup make changes here
+        pass: process.env.EMAIL_PWD    // Add your emailID and password
     }
 });
 app.listen(process.env.PORT || 3000);
