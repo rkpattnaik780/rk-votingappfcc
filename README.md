@@ -46,7 +46,7 @@ Voix is a voting app where people can create an account to create polls and cast
 
 # Deploying tools used 
 
-The app is live at : http://rk-votingappfcc.herokuapp.com
+The app is live at : https://infinite-chamber-50445.herokuapp.com/
 
 ### Platform used 
 [Heroku CLI](https://dashboard.heroku.com/)
