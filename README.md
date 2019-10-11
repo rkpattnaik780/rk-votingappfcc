@@ -31,7 +31,7 @@ Voix is a voting app where people can create an account to create polls and cast
 * A user can login to his account using the username and password provided.
 * Upon forgetting password , he can get it mailed to his registered email ID.
 * A user can create his own poll and caste votes to existing.
-* An unregistered user is allowed to see the [live polls](http://rk-votingappfcc.herokuapp.com/htmlpages/polls.html) but not to vote.
+* An unregistered user is allowed to see the [live polls](https://infinite-chamber-50445.herokuapp.com/htmlpages/polls.html) but not to vote.
 * Supported in large screens and small screens alike.
 
 # Technologies Used :
@@ -46,7 +46,7 @@ Voix is a voting app where people can create an account to create polls and cast
 
 # Deploying tools used 
 
-The app is live at : http://rk-votingappfcc.herokuapp.com
+The app is live at : https://infinite-chamber-50445.herokuapp.com/
 
 ### Platform used 
 [Heroku CLI](https://dashboard.heroku.com/)
