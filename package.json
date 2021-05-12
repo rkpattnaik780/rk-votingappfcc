@@ -19,7 +19,7 @@
     "express": "^4.15.3",
     "express-session": "^1.15.3",
     "mongodb": "^2.2.30",
-    "nodemailer": "^4.0.1"
+    "nodemailer": "^6.4.16"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
